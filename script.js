@@ -12,6 +12,7 @@ window.onload = function() {
     var initInput   = document.querySelector("#initInput")
     var submitBtn   = document.querySelector(".submitBtn")
     var msgDiv      = document.querySelector("#msg");
+    var scorePage    = document.querySelector("#scorePage")
 
     var score       = 0
     var secondsLeft = 60
@@ -19,22 +20,22 @@ window.onload = function() {
     var ulCreate    = document.createElement("ul");
     var hCreate     = document.createElement("h1")
     
-    var questions   = ["how many", "who was", "what class", "what area"]
+    var questions   = ["How many classes were there in Vanilla WoW?", "Who was the Warchief of the horde at that time?", "What class was the Warchief?", "What was the name of Horde capital city?"]
     var meow      = [
                         {
                             choice: ["9","6","12","14"]
                         },
                         {
-                            choice: ["Dragon","orc","Naga","Elf"]
+                            choice: ["Baine","Thrall","Sylvanas","Vol'Jin"]
                         },
                         {
-                            choice: ["Paladin","Rogue","warrior","druid"]
+                            choice: ["Warlock","Rogue","Warrior","Shaman"]
                         },
                         {
-                            choice: ["durotar", "duskwood", "badlands", "mulgore"]
+                            choice: ["Stormwind", "Orgrimmar", "UnderCity", "Ironforge"]
                         }
                     ]
-    var answers     = ["12", "Dragon", "Rogue", "durotar"]
+    var answers     = ["9", "Thrall", "Shaman", "Orgrimmar"]
     var questionNum = -1;
     var answer;
 
@@ -59,9 +60,9 @@ window.onload = function() {
 
 
     function questStage() {
+        mainWin.setAttribute("style", "display: none")
         quizWin.setAttribute("style", "display: block")
         questionNum++;
-        mainWin.innerHTML  = " "
         liAnswer.innerHTML = " "
         answer = answers[questionNum]
         
@@ -111,15 +112,45 @@ window.onload = function() {
     submitBtn.addEventListener("click", function (event) {
         event.preventDefault();
 
+        var scoreVal = document.querySelector("#scoreCard").value
         var initial = document.querySelector("#initInput").value;
         console.log(initial)
-
+        var existFile = JSON.localStorage.getItem("Initials")
+        if(existFile === null) existFile = []
+        var newEntry = {
+            "Initial": initial,
+            "Score": scoreVal
+        };
+         localStorage.setItem("score", JSON.stringify(newEntry))
+         existFile.push(newEntry)
+         localStorage.setItem("allEntry", JSON.stringify(existFile))   
         if(initial === ""){
             msgDiv.textContent = "Error: Cannot leave initals blank!";
         } else {
             msgDiv.textContent = "Success: Registered successfully!";
             localStorage.setItem("Score", score);
             localStorage.setItem("Initials", initial);
-        }
+        }init();
     })
+
+    function init() {
+    hsWin.setAttribute("style","display: none")
+    scorePage.setAttribute("style", "display: block")
+
+    var existFile = JSON.localStorage.getItem("Initials")
+    var Score    = localStorage.getItem("Score")
+    var createLi = document.createElement("div")
+    createLi.textContent = "Initials: " + Initials + "||    Score: " + Score;
+    
+    console.log(Initials)
+    console.log(Score)
+    document.getElementById("scorePage").appendChild(createLi)
+    
+
+
+
+}
+
+
+
 }

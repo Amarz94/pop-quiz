@@ -11,11 +11,11 @@
 <body>
   <p class= "score">Score: </p>
 
-  <div class="mainWin">
+  <div class="mainWin col-md-8">
     <div>
       <h1>Quiz</h1>
     <p>Are you prepared</p>
-    <button type="button" id="startBtn">Start!</button>
+    <button class="p-3 m-1 btn btn-light btn-block"type="button" id="startBtn">Start!</button>
     </div>
   </div>
 
@@ -36,13 +36,13 @@
       <h1>Quiz Complete!</h1>
       <p>Register your score!</p>
       <div class="form-group row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">Score</label>
+        <label id="EndStat" for="staticEmail" class="col-sm-2 col-form-label"><P>Score: </P></label>
         <div class="col-sm-10">
           <input type="text" readonly class="form-control-plaintext" id="scoreCard" value="email@example.com">
         </div>
       </div>
       <div class="form-group row">
-        <label for="Initials" class="col-sm-2 col-form-label">Initials</label>
+        <label id="EndStat" for="Initials" class="col-sm-2 col-form-label"><p>Initials: </P></label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="initInput">
         </div>
@@ -51,6 +51,10 @@
       <button class="submitBtn"type="button">Register!</button>
       <button class="hsBtn"type="button">See your Record!</button>
     </form>
+  </div>
+
+  <div id="scorePage" style="display: none;">
+
   </div>
   
 
