@@ -1,5 +1,12 @@
 # Illidan Quiz
 
+![](files/Media/SS1.JPG)
+
+![](files/Media/SS2.JPG)
+
+![](files/Media/SS3.JPG)
+
+![](files/Media/SS4.JPG)
 
 ## Project overview 
 
