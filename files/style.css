@@ -1,6 +1,83 @@
 body {
     background-color: black;
 }
+
+li {
+    margin: auto;
+    width: 40%;
+    border: 5px solid;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
+    color:rgba(1, 138, 19, 0.699);
+    border-width: thin;
+    font-weight: bold;
+    font-size: large;
+    border-image-source: url(https://steamuserimages-a.akamaihd.net/ugc/812181304585755503/2C45E8E9195B8F28F7FA59640728DCB64A8DDC9B/);
+    border-image-slice: 30;
+    }
+
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgba(1, 138, 19, 0.699);
+}
+a:hover {
+    color: rgb(0, 94, 13);
+    background: rgba(80, 80, 80, 0.562);
+}
+
+#scoreCard {
+    font-weight: bold;
+    color:rgba(1, 138, 19, 0.699);;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 7%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.562) ; 
+    border-radius: 5px;
+}
+#EndStat {
+    font-weight: bold;
+    color:rgba(1, 138, 19, 0.699);;
+    font-size: 20px;
+}
+
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: rgba(0, 0, 0, 0.562);
+    border-radius: 5px;
+    color:rgba(1, 138, 19, 0.699);;
+    margin: auto;
+}
+
+#initInput {
+    width: 7%;
+    margin: auto;
+}
+
+#myVideo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+  }
+
+#startBtn {
+    width: auto;
+    margin: auto;
+    color: rgba(0, 0, 0, 0.719);
+    justify-content: center;
+    display: flex;
+}
+
 .mainWin {
     margin: auto;
     width: 60%;
@@ -66,67 +143,10 @@ body {
     border-color: black;
 }
 
-#scoreCard {
-    font-weight: bold;
-    color:rgba(1, 138, 19, 0.699);;
-    font-size: 20px;
-    text-align: center;
-    margin: auto;
-    width: 7%;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.562) ; 
-    border-radius: 5px;
-}
-#EndStat {
-    font-weight: bold;
-    color:rgba(1, 138, 19, 0.699);;
-    font-size: 20px;
-}
 
-#button {
-    width: 6em;
-    border: 2px solid green;
-    background: rgba(0, 0, 0, 0.562);
-    border-radius: 5px;
-    color:rgba(1, 138, 19, 0.699);;
-    margin: auto;
-}
-a {
-    display: block;
-    width: 100%;
-    line-height: 2em;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    color: rgba(1, 138, 19, 0.699);
-}
-a:hover {
-    color: rgb(0, 94, 13);
-    background: rgba(80, 80, 80, 0.562);
-}
-
-#initInput {
-    width: 7%;
-    margin: auto;
-}
-
-#myVideo {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    
-  }
 .score {
     background-color: rgba(255, 255, 255, 0);
     width: 10%;
-}
-#startBtn {
-    width: auto;
-    margin: auto;
-    color: rgba(0, 0, 0, 0.719);
-    justify-content: center;
-    display: flex;
 }
 
 .m-1 {
@@ -134,18 +154,5 @@ a:hover {
 }
 
 
-li {
-    margin: auto;
-    width: 40%;
-    border: 5px solid;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.562);
-    color:rgba(1, 138, 19, 0.699);
-    border-width: thin;
-    font-weight: bold;
-    font-size: large;
-    border-image-source: url(https://steamuserimages-a.akamaihd.net/ugc/812181304585755503/2C45E8E9195B8F28F7FA59640728DCB64A8DDC9B/);
-    border-image-slice: 30;
-    }
+
 
